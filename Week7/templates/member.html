@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>會員頁面</title>
+        <link rel="stylesheet" href="/static/styles.css">
+        <script src="/static/memberQuery.js"></script>
+        <script src="/static/updateName.js"></script>
+
+    </head>
+    <body>
+        <div class="frame">
+            <div class="title">歡迎光臨，這是會員頁</div>
+            <div class="success">{{ user_name }}，歡迎登入系統</div>
+            <div class="signout"><a href="/signout">登出系統</a></div>
+            <hr style="border: 1px solid rgb(189, 189, 189); width: 80%;">
+            <div class="query">
+                <div class="query-title">查詢會員姓名</div>
+                <form id="memberQueryForm">
+                    <div class="query-input">
+                        <input type="text" id="usernameInput" name="username" required>
+                    </div>
+                    <button type="button" id="queryButton">查詢</button>
+                </form>
+                <div id="memberInfo"></div>
+            </div>
+            <hr style="border: 1px solid rgb(189, 189, 189); width: 80%;">
+            <div class="update-name">
+                <div class="newName-title">更新我的姓名</div>
+                <div class="name-input">
+                    <input type="text" id="newNameInput" name="newName" required>
+                <button type="button" id="updateNameButton">更新</button>
+            </div>
+                <div id="updateResult"></div>
+            </div>
+        </div>
+    </body>
+</html>
